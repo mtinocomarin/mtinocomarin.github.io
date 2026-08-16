@@ -1,15 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milton Tinoco | Engineering Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Milton Tinoco's engineering and research portfolio in embedded systems, robotics, machine learning, and assistive technology.">
+  <meta name="theme-color" content="#07111f">
+  <title>Milton Tinoco | Engineering & Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
-
 <body>
-    <h1>Milton Tinoco</h1>
-    <p>Embedded Systems • Robotics • Machine Learning</p>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Milton Tinoco home">
+        <span class="brand-mark" aria-hidden="true">MT</span>
+        <span>Milton Tinoco</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="sr-only">Toggle navigation</span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation" data-nav>
+        <a class="active" href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="research.html">Research</a>
+        <a href="experience.html">Experience</a>
+        <a href="about.html">About</a>
+        <a href="assets/resume/Milton-Tinoco-Resume.pdf" data-resume>Resume</a>
+        <a class="nav-external" href="https://github.com/mtinocomarin" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
 
-    <h2>Portfolio Under Construction</h2>
+  <main id="main-content">
+    <section class="hero section">
+      <div class="hero-grid container">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="status-dot"></span> Engineering + research portfolio</p>
+          <h1>I build intelligent systems that connect the <em>physical</em> and <em>digital</em> worlds.</h1>
+          <p class="hero-intro">I'm <strong>Milton Tinoco</strong>, an engineer working across embedded systems, robotics, machine learning, and assistive technology—from biosignals and real-time firmware to perception and human-centered devices.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="projects.html">Explore my work <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="research.html">View research</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal" aria-label="A technical diagram connecting sensing, intelligence, and action">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="core"><span>MT</span><small>ENGINEERING</small></div>
+          <div class="signal-card signal-a"><span>01</span><strong>SENSE</strong><small>EMG · ToF · Vision</small></div>
+          <div class="signal-card signal-b"><span>02</span><strong>COMPUTE</strong><small>STM32 · ML · CV</small></div>
+          <div class="signal-card signal-c"><span>03</span><strong>ACT</strong><small>Robotics · Haptics</small></div>
+        </div>
+      </div>
+      <div class="container expertise-strip reveal" aria-label="Areas of expertise">
+        <span>Embedded Systems</span><i></i><span>Robotics</span><i></i><span>Machine Learning</span><i></i><span>Computer Vision</span><i></i><span>Biomedical Engineering</span>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="featured-work">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">Selected work / 01—03</p><h2>Engineering with purpose.</h2></div>
+          <a class="text-link" href="projects.html">View all projects <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="project-grid">
+          <article class="project-card project-featured reveal">
+            <div class="project-art emg-art" aria-hidden="true">
+              <div class="art-label">LIVE SIGNAL / EMG</div><div class="waveform"></div>
+              <div class="metric"><span>CLASS</span><strong>GRASP</strong></div>
+            </div>
+            <div class="project-content">
+              <div class="project-number">01 / ASSISTIVE ROBOTICS</div>
+              <h3>Real-Time EMG / ExoGlove System</h3>
+              <p>A multimodal assistive platform that translates muscle activity into real-time hand-intent classification and robotic glove control.</p>
+              <ul class="tag-list"><li>STM32</li><li>EMG</li><li>LDA</li><li>Computer Vision</li></ul>
+              <a class="card-link" href="projects.html#emg-exoglove" aria-label="View Real-Time EMG and ExoGlove project">View project <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-art sense-art" aria-hidden="true">
+              <div class="radar"><span></span><i></i><b></b></div><div class="art-label">360° PROXIMITY MAP</div>
+            </div>
+            <div class="project-content">
+              <div class="project-number">02 / WEARABLE SYSTEMS</div>
+              <h3>Sense Hat</h3>
+              <p>A wearable spatial-awareness device using six time-of-flight sensors and eight haptic motors for intuitive, 360-degree obstacle feedback.</p>
+              <ul class="tag-list"><li>STM32L476</li><li>ToF</li><li>Haptics</li><li>DMA</li></ul>
+              <a class="card-link" href="projects.html#sense-hat" aria-label="View Sense Hat project">View project <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-art vision-art" aria-hidden="true">
+              <div class="point-cloud"></div><div class="viewfinder"></div><div class="art-label">DEPTH / RECONSTRUCTION</div>
+            </div>
+            <div class="project-content">
+              <div class="project-number">03 / COMPUTER VISION</div>
+              <h3>Stereo Vision for 3D Room Modeling</h3>
+              <p>A stereo-camera pipeline for disparity estimation, depth recovery, and point-cloud reconstruction of indoor environments.</p>
+              <ul class="tag-list"><li>Python</li><li>OpenCV</li><li>Stereo Depth</li><li>3D</li></ul>
+              <a class="card-link" href="projects.html#stereo-vision" aria-label="View Stereo Vision project">View project <span>↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section research-callout">
+      <div class="container callout-grid reveal">
+        <div><p class="eyebrow">Research focus</p><h2>Technology designed around human capability.</h2></div>
+        <div><p>My work explores how embedded intelligence, biosignal processing, and robotic systems can create practical tools for human movement, accessibility, and assistance.</p><a class="button button-light" href="research.html">Explore research <span>→</span></a></div>
+      </div>
+    </section>
+
+    <section class="section toolkit-section">
+      <div class="container">
+        <div class="section-heading reveal"><div><p class="eyebrow">Technical toolkit</p><h2>From low-level signals to full systems.</h2></div></div>
+        <div class="toolkit-grid reveal">
+          <div><span class="toolkit-index">01</span><h3>Embedded</h3><p>STM32 · C/C++ · FreeRTOS · I2C · SPI · UART · ADC · DMA · PWM</p></div>
+          <div><span class="toolkit-index">02</span><h3>Intelligence</h3><p>Python · Machine Learning · Signal Processing · OpenCV · Point Clouds</p></div>
+          <div><span class="toolkit-index">03</span><h3>Systems</h3><p>Robotics · ROS · Sensors · Haptics · Data Visualization · Unity</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section">
+      <div class="container contact-inner reveal">
+        <p class="eyebrow">Let's connect</p>
+        <h2>Interested in building something meaningful?</h2>
+        <p>I'm always open to thoughtful conversations about engineering, research, and technology with real-world impact.</p>
+        <div class="button-row"><a class="button button-primary" href="about.html">More about me <span>→</span></a><a class="button button-secondary" href="https://github.com/mtinocomarin" target="_blank" rel="noopener">View GitHub ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid"><div><a class="brand" href="index.html"><span class="brand-mark">MT</span><span>Milton Tinoco</span></a><p>Engineering intelligent systems for human impact.</p></div><div class="footer-links"><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="about.html">About</a><a href="https://github.com/mtinocomarin">GitHub ↗</a></div></div>
+    <div class="container footer-base"><span>© <span data-year></span> Milton Tinoco</span><span>Designed &amp; built with intent.</span></div>
+  </footer>
 </body>
 </html>
