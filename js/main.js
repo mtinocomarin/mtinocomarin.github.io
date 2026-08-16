@@ -6,4 +6,3 @@ const updateHeader=()=>header?.classList.toggle('scrolled',window.scrollY>24);up
 document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
 const reveals=document.querySelectorAll('.reveal');
 if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});reveals.forEach(el=>observer.observe(el))}else{reveals.forEach(el=>el.classList.add('visible'))}
-document.querySelectorAll('[data-resume]').forEach(link=>link.addEventListener('click',event=>{if(link.getAttribute('href')?.includes('Milton-Tinoco-Resume.pdf')){event.preventDefault();alert('Resume coming soon. Add Milton-Tinoco-Resume.pdf to assets/resume/ to enable this link.')}}));
