@@ -1,0 +1,4 @@
+.project-deep{grid-column:span 2}
+.project-details{display:grid;gap:10px;margin:6px 0 24px;padding-left:20px;color:var(--muted);font-size:.84rem}
+.project-details li::marker{color:var(--cyan)}
+@media(max-width:900px){.project-deep{grid-column:auto}}
