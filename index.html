@@ -10,7 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
+  <link rel="stylesheet" href="css/skills-map.css?v=8">
+  <script src="js/main.js?v=9" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -47,12 +48,29 @@
             <a class="button button-secondary" href="research.html">View research</a>
           </div>
         </div>
-        <div class="hero-visual reveal" aria-label="A technical diagram connecting sensing, intelligence, and action">
-          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-          <div class="core"><span>MT</span><small>ENGINEERING</small></div>
-          <div class="signal-card signal-a"><span>01</span><strong>SENSE</strong><small>EMG · ToF · Vision</small></div>
-          <div class="signal-card signal-b"><span>02</span><strong>COMPUTE</strong><small>STM32 · ML · CV</small></div>
-          <div class="signal-card signal-c"><span>03</span><strong>ACT</strong><small>Robotics · Haptics</small></div>
+        <div class="hero-visual skills-map reveal" data-skill-tree aria-label="Interactive technical skills, research platforms, and laboratory equipment tree">
+          <div class="tree-grid" aria-hidden="true"></div>
+          <div class="tree-status" aria-live="polite">Select a branch to explore</div>
+          <button class="tree-view-toggle" type="button" data-tree-view-toggle aria-pressed="false"><span aria-hidden="true">▦</span> Table View</button>
+          <div class="tree-table-panel" data-tree-table-panel hidden><div class="tree-table-panel-inner"></div></div>
+          <div class="tree-stage" data-tree-stage>
+            <span class="tree-line tree-static-line line-computer-vision" aria-hidden="true"></span>
+            <span class="tree-line tree-static-line line-robotics" aria-hidden="true"></span>
+            <span class="tree-line tree-static-line line-embedded" aria-hidden="true"></span>
+            <span class="tree-line tree-static-line line-research" aria-hidden="true"></span>
+            <span class="tree-line tree-static-line line-equipment" aria-hidden="true"></span>
+            <span class="tree-line tree-static-line line-leadership" aria-hidden="true"></span>
+            <span class="tree-line tree-static-line line-programming" aria-hidden="true"></span>
+            <button class="tree-node root static-node" type="button">SKILLS<small>CLICK TO EXPLORE</small></button>
+            <button class="tree-node branch static-node node-computer-vision" type="button">Computer Vision</button>
+            <button class="tree-node branch static-node node-robotics" type="button">Robotics</button>
+            <button class="tree-node branch static-node node-embedded" type="button">Embedded Systems</button>
+            <button class="tree-node branch static-node node-research" type="button">Research</button>
+            <button class="tree-node branch static-node node-equipment" type="button">Equipment</button>
+            <button class="tree-node branch static-node node-leadership" type="button">Leadership</button>
+            <button class="tree-node branch static-node node-programming" type="button">Programming</button>
+          </div>
+          <noscript><p class="tree-fallback">Computer Vision · Robotics · Embedded Systems · Research · Equipment · Leadership · Programming</p></noscript>
         </div>
       </div>
       <div class="container expertise-strip reveal" aria-label="Areas of expertise">
@@ -120,10 +138,32 @@
     <section class="section toolkit-section">
       <div class="container">
         <div class="section-heading reveal"><div><p class="eyebrow">Technical toolkit</p><h2>Technical Skills &amp; Platforms</h2></div></div>
-        <div class="toolkit-grid reveal">
-          <div><span class="toolkit-index">01</span><h3>Embedded</h3><p>STM32 · C/C++ · FreeRTOS · I2C · SPI · UART · ADC · DMA · PWM</p></div>
-          <div><span class="toolkit-index">02</span><h3>Intelligence</h3><p>Python · Machine Learning · Signal Processing · OpenCV · Point Clouds</p></div>
-          <div><span class="toolkit-index">03</span><h3>Systems</h3><p>Robotics · ROS · Sensors · Haptics · Data Visualization · Unity</p></div>
+        <div class="toolkit-grid skills-grid reveal">
+          <div><span class="toolkit-index">01</span><h3>Embedded Systems</h3><p>STM32 · ARM Cortex-M · Microcontrollers · Embedded C · Embedded Software · ARM Assembly · FreeRTOS · Bare-metal · ADC · DMA · GPIO · UART · I2C · SPI · PWM · Timers · Interrupts · RISC-V</p></div>
+          <div><span class="toolkit-index">02</span><h3>Robotics &amp; Platforms</h3><p>ROS · ROS2 · SLAM · Visual SLAM · Nav2 · LiDAR · Intel RealSense · NVIDIA Jetson · Raspberry Pi · Arduino · Motor Control · Haptics · Unity</p></div>
+          <div><span class="toolkit-index">03</span><h3>Vision &amp; Machine Learning</h3><p>OpenCV · Stereo Vision · Camera Calibration · Stereo Rectification · Disparity · Depth Estimation · Point Clouds · Open3D · FoundationStereo · YOLO · LDA · PyTorch · Artificial Intelligence · Linear Regression</p></div>
+          <div><span class="toolkit-index">04</span><h3>Lab Equipment &amp; Sensors</h3><p>Analog Discovery 2 Logic Analyzer · Oscilloscopes · EMG Sensors · VL53L5CX ToF Sensors · IMU · Pressure Sensors · Stereo Cameras</p></div>
+          <div><span class="toolkit-index">05</span><h3>Research Software</h3><p>PyQt5 · PyQtGraph · Matplotlib · NumPy · Multithreading · Serial Communication · Real-time Visualization · Signal Processing · File I/O</p></div>
+          <div><span class="toolkit-index">06</span><h3>Development &amp; Digital Design</h3><p>STM32CubeIDE · Keil uVision · Intel Quartus Prime · Git · GitHub · Linux · Bash · Docker · Anaconda · MATLAB · PSpice · SOLIDWORKS · FPGA · Verilog · PCB Design · Digital Circuit Design · Debugging</p></div>
+          <div><span class="toolkit-index">07</span><h3>Programming &amp; Software</h3><p>C · C++ · Python · Java · ARM Assembly · Assembly Language · Object-Oriented Programming · Data Structures · Software Development · Game Development</p></div>
+          <div><span class="toolkit-index">08</span><h3>Leadership &amp; Collaboration</h3><p>Team Leadership · Research Supervision · Laboratory Instruction · Mentoring · Coaching · Communication · Project Planning · Teamwork · Problem Solving</p></div>
+        </div>
+        <div class="skills-table-section reveal">
+          <div class="skills-table-heading"><div><p class="eyebrow">Complete skills index</p><h3>Skills Table</h3></div><span>7 categories · 94 skills</span></div>
+          <div class="skills-table-scroll" tabindex="0" aria-label="Scrollable skills table">
+            <table class="skills-table">
+              <thead><tr><th scope="col">Category</th><th scope="col">Skills, technologies &amp; tools</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Computer Vision</th><td><span>OpenCV</span><span>Stereo Vision</span><span>Visual SLAM</span><span>Camera Calibration</span><span>Stereo Rectification</span><span>FoundationStereo</span><span>Open3D</span><span>YOLO</span><span>PyTorch</span><span>Point Clouds</span></td></tr>
+                <tr><th scope="row">Robotics</th><td><span>ROS</span><span>ROS2</span><span>SLAM</span><span>Visual SLAM</span><span>Nav2</span><span>LiDAR</span><span>Intel RealSense</span><span>NVIDIA Jetson</span><span>Motor Control</span><span>Arduino</span><span>Unity</span></td></tr>
+                <tr><th scope="row">Embedded Systems</th><td><span>STM32</span><span>ARM Cortex-M</span><span>Microcontrollers</span><span>Embedded C</span><span>Embedded Software</span><span>Bare-Metal</span><span>FreeRTOS</span><span>ADC</span><span>DMA</span><span>GPIO</span><span>UART</span><span>I2C</span><span>SPI</span><span>PWM</span><span>Timers</span><span>Interrupts</span><span>RISC-V</span><span>FPGA</span><span>Verilog</span></td></tr>
+                <tr><th scope="row">Research</th><td><span>Research Skills</span><span>Testing</span><span>Electromyography</span><span>Signal Processing</span><span>Sensor Fusion</span><span>Data Analysis</span><span>Machine Learning</span><span>Artificial Intelligence</span><span>Linear Regression</span><span>Mathematics</span><span>Problem Solving</span><span>Documentation</span></td></tr>
+                <tr><th scope="row">Equipment</th><td><span>AD2 Logic Analyzer</span><span>Oscilloscope</span><span>EMG Sensors</span><span>VL53L5CX ToF Sensors</span><span>Stereo Cameras</span><span>IMU</span><span>Pressure Sensors</span><span>STM32CubeIDE</span><span>Keil uVision</span><span>Quartus Prime</span><span>PSpice</span><span>SOLIDWORKS</span><span>MATLAB</span><span>Anaconda</span></td></tr>
+                <tr><th scope="row">Leadership</th><td><span>Team Leadership</span><span>Research Supervision</span><span>Laboratory Instruction</span><span>Mentoring</span><span>Coaching</span><span>Communication</span><span>Project Planning</span><span>Teamwork</span><span>Task Planning</span><span>Client Meetings</span></td></tr>
+                <tr><th scope="row">Programming</th><td><span>C</span><span>C++</span><span>Python</span><span>Java</span><span>ARM Assembly</span><span>Assembly Language</span><span>Bash</span><span>Linux</span><span>Object-Oriented Programming</span><span>Software Development</span><span>Data Structures</span><span>Git</span><span>GitHub</span><span>PyQt5</span><span>PyQtGraph</span><span>NumPy</span><span>Multithreading</span><span>Game Development</span></td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </section>
