@@ -1,4 +1,62 @@
-.project-deep{grid-column:span 2}
-.project-details{display:grid;gap:10px;margin:6px 0 24px;padding-left:20px;color:var(--muted);font-size:.84rem}
-.project-details li::marker{color:var(--cyan)}
-@media(max-width:900px){.project-deep{grid-column:auto}}
+.portfolio-section{padding-top:72px}
+.portfolio-github-cta{margin-top:28px}
+.portfolio-stack{display:grid;gap:28px}
+article[id]{scroll-margin-top:105px}
+
+.project-showcase{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);padding:0;overflow:hidden}
+.project-showcase--reverse{grid-template-columns:minmax(320px,.95fr) minmax(0,1.05fr)}
+.project-showcase--reverse .project-showcase__body{order:2}
+.project-showcase--reverse .project-media{order:1}
+.project-showcase__body{display:flex;flex-direction:column;align-items:flex-start;padding:clamp(30px,4vw,52px)}
+.project-showcase__body h2{margin-bottom:18px;font-size:clamp(1.9rem,3vw,2.7rem)}
+.project-showcase__body>p:not(.eyebrow){max-width:720px;color:var(--muted)}
+.project-showcase .tag-list{margin-top:auto;padding-top:4px}
+
+.project-media{display:grid;grid-template-rows:minmax(380px,1fr) auto;margin:0;background:#30241c;overflow:hidden}
+.project-media>img,.project-media>video{display:block;width:100%;height:100%;min-height:380px;max-height:650px;object-fit:cover;background:#30241c}
+.project-media--contain>img,.project-media--contain>video{object-fit:contain}
+.project-media--light,.project-media--light>img{background:#eadaca}
+.project-media--portrait>video{object-fit:contain;background:#241b16}
+.project-media figcaption{padding:13px 18px;background:#403027;color:#d9c6b5;font:500 .62rem/1.5 "DM Mono",monospace;letter-spacing:.03em}
+
+.project-resources{display:flex;flex-wrap:wrap;gap:10px;width:100%;margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.resource-link{display:flex;align-items:center;justify-content:space-between;gap:16px;min-width:min(100%,240px);padding:12px 14px;border:1px solid var(--line);color:#4a3529;font-size:.76rem;font-weight:800;transition:border-color .2s,background .2s,transform .2s}
+.resource-link span{color:#8b6d56;font:500 .57rem "DM Mono",monospace;white-space:nowrap}
+.resource-link:hover{transform:translateY(-2px);border-color:#a9653f;background:#f7ecdf}
+
+.portfolio-subheading{margin-top:62px;padding-bottom:6px}
+.portfolio-subheading h2{font-size:clamp(2rem,4vw,3.3rem)}
+.compact-project-grid,.build-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.compact-project{display:flex;flex-direction:column}
+.compact-project h3,.build-card h3{margin:0 0 14px;font-size:1.55rem}
+.compact-project>p:not(.eyebrow),.build-card__copy>p:not(.eyebrow){color:var(--muted)}
+.compact-project .tag-list{margin-top:auto}
+
+.build-card{display:flex;flex-direction:column;padding:0;overflow:hidden}
+.build-card__copy{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:34px}
+.build-card__copy .tag-list{margin-top:auto}
+.build-card>video{display:block;width:100%;height:440px;object-fit:contain;background:#30241c}
+
+a:focus-visible,button:focus-visible,video:focus-visible{outline:3px solid #bd7049;outline-offset:3px}
+
+@media(max-width:900px){
+  .portfolio-section{padding-top:55px}
+  .project-showcase,.project-showcase--reverse{grid-template-columns:1fr}
+  .project-showcase--reverse .project-showcase__body,.project-showcase--reverse .project-media{order:initial}
+  .project-media{grid-template-rows:minmax(330px,auto) auto}
+  .project-media>img,.project-media>video{min-height:330px;max-height:560px}
+  .compact-project-grid,.build-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:600px){
+  .portfolio-stack{gap:20px}
+  .project-showcase__body{padding:28px 23px}
+  .project-showcase__body h2{font-size:2rem}
+  .project-media{grid-template-rows:minmax(250px,auto) auto}
+  .project-media>img,.project-media>video{min-height:250px;max-height:460px}
+  .project-resources{display:grid}
+  .resource-link{width:100%;min-width:0}
+  .portfolio-subheading{margin-top:42px}
+  .build-card__copy{padding:28px 23px}
+  .build-card>video{height:400px}
+}

@@ -9,9 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2">
   <link rel="stylesheet" href="css/skills-map.css?v=8">
-  <link rel="stylesheet" href="css/warm-theme.css?v=2">
+  <link rel="stylesheet" href="css/warm-theme.css?v=3">
   <script src="js/main.js?v=9" defer></script>
 </head>
 <body>
@@ -27,7 +27,7 @@
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Main navigation" data-nav>
         <a class="active" href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
+        <a href="projects.html">Portfolio</a>
         <a href="research.html">Research</a>
         <a href="experience.html">Experience</a>
         <a href="about.html">About</a>
@@ -87,22 +87,23 @@
         </div>
         <div class="project-grid">
           <article class="project-card project-featured reveal">
-            <div class="project-art emg-art" aria-hidden="true">
-              <div class="art-label">LIVE SIGNAL / EMG</div><div class="waveform"></div>
-              <div class="metric"><span>CLASS</span><strong>GRASP</strong></div>
+            <div class="project-art project-photo-art">
+              <img src="assets/media/emg/emg-prosthetic-hand-lab.webp" width="1600" height="1200" loading="lazy" alt="Prosthetic hand and embedded EMG hardware under test in the laboratory">
+              <div class="art-label">LIVE SIGNAL / EMG</div>
             </div>
             <div class="project-content">
-              <div class="project-number">01 / ASSISTIVE ROBOTICS</div>
-              <h3>Multimodal ExoGlove System</h3>
-              <p>A robotic platform integrating a separately developed real-time LDA EMG classifier with computer vision and embedded glove control for multimodal intention recognition.</p>
-              <ul class="tag-list"><li>STM32</li><li>Sensor Fusion</li><li>Embedded Control</li><li>Computer Vision</li></ul>
-              <a class="card-link" href="projects.html#emg-exoglove" aria-label="View Multimodal ExoGlove project">View project <span>↗</span></a>
+              <div class="project-number">01 / CURRENT RESEARCH</div>
+              <h3>Real-Time EMG Classifier System</h3>
+              <p>A standalone STM32 system that acquires forearm muscle signals, extracts time-domain features, and classifies grasp and release intent in real time.</p>
+              <ul class="tag-list"><li>STM32</li><li>Surface EMG</li><li>LDA</li><li>Embedded C</li></ul>
+              <a class="card-link" href="projects.html#lda-emg" aria-label="View Real-Time EMG Classifier System project">View current research <span>↗</span></a>
             </div>
           </article>
 
           <article class="project-card reveal">
-            <div class="project-art sense-art" aria-hidden="true">
-              <div class="radar"><span></span><i></i><b></b></div><div class="art-label">360° PROXIMITY MAP</div>
+            <div class="project-art project-photo-art project-photo-art--contain">
+              <img src="assets/media/sense-hat/sense-hat-animation-poster.webp" width="720" height="900" loading="lazy" alt="Sense Hat prototype visualization with directional time-of-flight sensors">
+              <div class="art-label">360° PROXIMITY MAP</div>
             </div>
             <div class="project-content">
               <div class="project-number">02 / WEARABLE SYSTEMS</div>
@@ -114,8 +115,9 @@
           </article>
 
           <article class="project-card reveal">
-            <div class="project-art vision-art" aria-hidden="true">
-              <div class="point-cloud"></div><div class="viewfinder"></div><div class="art-label">DEPTH / RECONSTRUCTION</div>
+            <div class="project-art project-photo-art project-photo-art--contain">
+              <img src="assets/media/stereo-vision/stereo-depth-result.webp" width="1606" height="442" loading="lazy" alt="Stereo camera input beside its color-coded depth result">
+              <div class="art-label">DEPTH / RECONSTRUCTION</div>
             </div>
             <div class="project-content">
               <div class="project-number">03 / COMPUTER VISION</div>
@@ -131,8 +133,8 @@
 
     <section class="section research-callout">
       <div class="container callout-grid reveal">
-        <div><p class="eyebrow">Research focus</p><h2>Embedded Systems &amp; Robotics Research</h2></div>
-        <div><p>My work explores real-time embedded control, sensing, machine learning, and computer vision for robotic systems. My current research applies those skills to a multimodal ExoGlove and temporal approaches to EMG classification.</p><a class="button button-light" href="research.html">Explore research <span>→</span></a></div>
+        <div><p class="eyebrow">Current research</p><h2>Real-Time EMG Classification</h2></div>
+        <div><p>My current research centers on a real-time embedded EMG classifier system for recognizing movement intent from forearm muscle activity. I am also investigating temporal methods to improve classification reliability beyond the original LDA-based system.</p><a class="button button-light" href="research.html">Explore research <span>→</span></a></div>
       </div>
     </section>
 
@@ -174,13 +176,18 @@
         <p class="eyebrow">Let's connect</p>
         <h2>Contact &amp; Professional Links</h2>
         <p>I'm always open to thoughtful conversations about engineering, research, and technology with real-world impact.</p>
-        <div class="button-row"><a class="button button-primary" href="about.html">More about me <span>→</span></a><a class="button button-secondary" href="https://github.com/mtinocomarin" target="_blank" rel="noopener">View GitHub ↗</a></div>
+        <div class="button-row">
+          <a class="button button-primary" href="mailto:mtinocomarin@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="https://www.linkedin.com/in/miltonmtinoco/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="https://github.com/mtinocomarin" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="about.html">More about me <span aria-hidden="true">→</span></a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid"><div><a class="brand" href="index.html"><span class="brand-mark">MT</span><span>Milton Tinoco</span></a><p>Embedded systems, robotics, and intelligent machines.</p></div><div class="footer-links"><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="about.html">About</a><a href="https://github.com/mtinocomarin">GitHub ↗</a></div></div>
+    <div class="container footer-grid"><div><a class="brand" href="index.html"><span class="brand-mark">MT</span><span>Milton Tinoco</span></a><p>Embedded systems, robotics, and intelligent machines.</p></div><div class="footer-links"><a href="projects.html">Portfolio</a><a href="research.html">Research</a><a href="about.html">About</a><a href="https://github.com/mtinocomarin" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/miltonmtinoco/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:mtinocomarin@gmail.com">Email ↗</a></div></div>
     <div class="container footer-base"><span>© <span data-year></span> Milton Tinoco</span><span>Designed &amp; built with intent.</span></div>
   </footer>
 </body>
